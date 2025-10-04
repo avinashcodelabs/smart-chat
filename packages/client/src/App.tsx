@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
+import { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/button';
 
 function App() {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch("/api/hello").then(res => res.json()).then((res) => {
-      setMessage(res.message)
-    })
-  }, [])
+    fetch('/api/hello')
+      .then((res) => res.json())
+      .then((res) => {
+        setMessage(res.message);
+      });
+  }, []);
 
   return (
     <div className="p-4">
@@ -18,4 +20,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
