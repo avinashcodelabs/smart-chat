@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="p-4">
-      <p className="text-2xl pb-2">Hello world!</p>
+      <p className="text-2xl pb-2">{message}</p>
       <Button>Send!</Button>
     </div>
   );
